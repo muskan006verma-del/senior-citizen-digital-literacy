@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Digital Literacy Awareness for Senior Citizens</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbfdfd;--ink:#10222b;--muted:#3d5560;--teal:#0b5563;--teal-d:#07404b;--sun:#ffc857;--line:#b9cfd4;--card:#ffffff;--soft:#e6f3f5;--bad:#a4261b;--good:#1c6b34;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1a1f;--ink:#f1f7f8;--muted:#b8ccd2;--teal:#6fd0e0;--teal-d:#9be0ec;--sun:#ffc857;--line:#2f4a53;--card:#13262d;--soft:#173038;--bad:#ff8f84;--good:#7bdc98}}
+:root[data-theme="dark"]{--bg:#0d1a1f;--ink:#f1f7f8;--muted:#b8ccd2;--teal:#6fd0e0;--teal-d:#9be0ec;--sun:#ffc857;--line:#2f4a53;--card:#13262d;--soft:#173038;--bad:#ff8f84;--good:#7bdc98}
+*{box-sizing:border-box}
+html{font-size:100%;scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Atkinson Hyperlegible","Noto Sans Devanagari","Nirmala UI",Mangal,Verdana,Arial,sans-serif;font-size:1.25rem;line-height:1.6}
+body.big{font-size:1.5rem}
+a{color:var(--teal)}
+:focus-visible{outline:4px solid var(--sun);outline-offset:3px}
+header.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--teal-d);color:#fff;display:flex;gap:12px;align-items:center;justify-content:space-between;padding:10px 16px;flex-wrap:wrap}
+header.bar b{font-size:1.1rem;line-height:1.25;max-width:22ch}
+header.bar nav{display:flex;gap:6px;flex-wrap:wrap}
+header.bar nav a{color:#fff;text-decoration:none;padding:6px 12px;border-radius:8px;font-size:1rem}
+header.bar nav a:hover{background:rgba(255,255,255,.18)}
+.fs{background:var(--sun);color:#10222b;border:0;border-radius:10px;padding:8px 14px;font:inherit;font-size:1rem;font-weight:700;cursor:pointer}
+main{max-width:980px;margin:0 auto;padding:0 18px}
+section{padding:44px 0;border-bottom:2px solid var(--line)}
+h1{font-size:2.6rem;line-height:1.12;margin:0 0 14px;max-width:16ch}
+h2{font-size:1.9rem;margin:0 0 8px}
+h3{font-size:1.3rem;margin:0}
+p{margin:0 0 12px;max-width:62ch}
+.lead{color:var(--muted)}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center}
+.btn{display:inline-block;background:var(--teal);color:#fff;border:0;border-radius:12px;padding:14px 24px;font:inherit;font-weight:700;text-decoration:none;cursor:pointer;min-height:52px}
+:root[data-theme="dark"] .btn{color:#06222a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn{color:#06222a}}
+.btn.alt{background:var(--sun);color:#10222b}
+.phone{background:#10222b;border-radius:34px;padding:16px 14px 22px;max-width:290px;margin:0 auto;box-shadow:0 0 0 4px var(--sun)}
+.phone .scr{background:#fff;border-radius:22px;padding:14px;display:grid;grid-template-columns:1fr 1fr;gap:10px;color:#10222b}
+.phone .t{border-radius:16px;padding:16px 6px;text-align:center;font-weight:700;font-size:1.1rem;line-height:1.2}
+.phone .t span{display:block;font-size:2rem;margin-bottom:4px}
+.t1{background:#d4f0dc}.t2{background:#d6ecf7}.t3{background:#ffe9b3}.t4{background:#fbd9d4}
+.phone .hello{grid-column:1/-1;text-align:center;font-weight:700;padding:4px 0 2px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
+.fact{border:2px solid var(--line);border-radius:14px;padding:16px;background:var(--card)}
+.fact small{display:block;color:var(--muted);font-size:1rem}
+.fact b{font-size:1.2rem}
+details{border:2px solid var(--line);border-radius:14px;background:var(--card);margin-bottom:12px}
+summary{cursor:pointer;padding:16px 18px;font-weight:700;font-size:1.25rem;list-style:none;display:flex;justify-content:space-between;gap:10px;min-height:56px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.6rem;line-height:1}
+details[open] summary::after{content:"\2212"}
+details[open]{border-color:var(--teal)}
+details ol{margin:0;padding:0 18px 16px 44px}
+details li{margin-bottom:8px}
+.quiz{background:var(--soft);border-radius:16px;padding:20px}
+.q{font-weight:700;margin-bottom:10px}
+.opts{display:grid;gap:10px}
+.opt{text-align:left;background:var(--card);color:var(--ink);border:2px solid var(--line);border-radius:12px;padding:14px 16px;font:inherit;cursor:pointer;min-height:52px}
+.opt:hover{border-color:var(--teal)}
+.opt.ok{border-color:var(--good);background:var(--card)}
+.opt.no{border-color:var(--bad)}
+.fb{margin-top:12px;font-weight:700;min-height:1.6em}
+.fb.ok{color:var(--good)}.fb.no{color:var(--bad)}
+form{display:grid;gap:14px;max-width:560px}
+label{font-weight:700;display:grid;gap:6px}
+input,select,textarea{font:inherit;font-weight:400;color:var(--ink);background:var(--card);border:2px solid var(--muted);border-radius:10px;padding:12px;width:100%;min-height:52px}
+.checks{display:grid;gap:8px;font-weight:400}
+.checks label{font-weight:400;display:flex;gap:10px;align-items:center}
+.checks input{width:26px;height:26px;min-height:0}
+.note{background:var(--soft);border-left:6px solid var(--teal);padding:14px 16px;border-radius:8px;margin-top:14px}
+.ok-msg{background:var(--soft);border:2px solid var(--good);border-radius:12px;padding:14px 16px;font-weight:700;display:none}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.ph{aspect-ratio:4/3;border:3px dashed var(--line);border-radius:14px;display:grid;place-items:center;text-align:center;padding:10px;color:var(--muted);background:var(--card);font-size:1rem}
+.help{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.help a{display:block;text-decoration:none;color:var(--ink);border:2px solid var(--line);border-radius:14px;padding:16px;background:var(--card)}
+.help a b{display:block;font-size:2rem;color:var(--teal)}
+.stars{display:flex;gap:8px}
+.stars button{font-size:2rem;background:none;border:0;cursor:pointer;color:var(--line);padding:4px;min-height:52px;min-width:52px}
+.stars button.on{color:var(--sun);text-shadow:0 0 1px #10222b}
+footer{padding:28px 18px 40px;text-align:center;color:var(--muted);font-size:1rem}
+@media (max-width:760px){.hero{grid-template-columns:1fr}h1{font-size:2.1rem}h2{font-size:1.6rem}body{font-size:1.15rem}body.big{font-size:1.4rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* ---- visual upgrade ---- */
+body{background:var(--bg);background-image:radial-gradient(circle at 100% 30%,rgba(255,200,87,.14),transparent 40%),radial-gradient(circle at 0% 70%,rgba(11,85,99,.10),transparent 40%)}
+header.bar{background:linear-gradient(90deg,#07404b,#0b5563);box-shadow:0 4px 18px rgba(0,0,0,.18)}
+header.bar nav a{border-radius:999px;padding:7px 15px}
+header.bar nav a:hover{background:var(--sun);color:#10222b}
+.herowrap{position:relative;overflow:hidden;color:#fff;background:linear-gradient(135deg,#052f38 0%,#0b5563 55%,#12878e 100%);border-radius:0 0 56px 56px;padding:36px 0 56px}
+.herowrap::before{content:"";position:absolute;width:420px;height:420px;right:-120px;top:-140px;border-radius:50%;background:radial-gradient(circle,rgba(255,200,87,.55),rgba(255,200,87,0) 65%)}
+.herowrap::after{content:"";position:absolute;width:320px;height:320px;left:-110px;bottom:-150px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.18),rgba(255,255,255,0) 65%)}
+.hero{position:relative;z-index:1;max-width:980px;margin:0 auto;padding:30px 18px 0;border:0}
+.hero h1{color:#fff;font-size:3.1rem;max-width:15ch}
+.hero .lead{color:#d6edf0}
+.chips{display:flex;flex-wrap:wrap;gap:10px;max-width:none!important;margin:16px 0}
+.chips span{background:rgba(255,255,255,.14);border:1.5px solid rgba(255,255,255,.35);border-radius:999px;padding:6px 16px;font-size:1rem;font-weight:700}
+.cta{display:flex;flex-wrap:wrap;gap:14px;max-width:none!important}
+.herowrap .btn{background:#fff!important;color:#07404b!important;box-shadow:0 6px 0 rgba(0,0,0,.22);transition:transform .15s}
+.herowrap .btn.alt{background:var(--sun)!important;color:#10222b!important}
+.herowrap .btn:hover{transform:translateY(-2px)}
+.phone{background:linear-gradient(160deg,#1c3b46,#0a1b21);box-shadow:0 0 0 4px var(--sun),0 30px 60px rgba(0,0,0,.35);animation:fl 5s ease-in-out infinite;transform:rotate(3deg)}
+@keyframes fl{50%{transform:rotate(3deg) translateY(-12px)}}
+.phone .scr{background:linear-gradient(#fff,#eef7f8)}
+.phone .t{box-shadow:0 3px 0 rgba(0,0,0,.12)}
+section{padding:52px 0;border-bottom:0}
+h2{display:flex;align-items:center;gap:12px;font-size:2.1rem}
+h2::before{content:"";flex:none;width:10px;height:1.15em;border-radius:6px;background:linear-gradient(var(--sun),#ff8a3d)}
+.facts{gap:16px}
+.fact{position:relative;padding:20px 18px 18px;border:0;border-top:6px solid var(--teal);box-shadow:0 8px 24px rgba(11,85,99,.14);border-radius:18px;transition:transform .2s}
+.fact:hover{transform:translateY(-4px)}
+.fact::before{font-size:2.2rem;display:block;margin-bottom:6px}
+.fact:nth-child(1){border-top-color:#2e9e57}.fact:nth-child(1)::before{content:"\1F193"}
+.fact:nth-child(2){border-top-color:#e8912d}.fact:nth-child(2)::before{content:"\1F4C5"}
+.fact:nth-child(3){border-top-color:#d6483b}.fact:nth-child(3)::before{content:"\1F4CD"}
+.fact:nth-child(4){border-top-color:#3b82c4}.fact:nth-child(4)::before{content:"\1F4F1"}
+.note{background:linear-gradient(90deg,var(--soft),transparent);border-left-color:var(--sun);border-radius:12px}
+details{border:0;border-radius:18px;box-shadow:0 6px 20px rgba(11,85,99,.12);overflow:hidden}
+details[open]{box-shadow:0 10px 28px rgba(11,85,99,.22);border-left:8px solid var(--sun)}
+summary{justify-content:flex-start;align-items:center;gap:14px}
+summary::after{margin-left:auto}
+summary::before{flex:none;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-size:1.6rem;background:var(--soft)}
+details:nth-of-type(1) summary::before{content:"\1F4DE";background:#d4f0dc}
+details:nth-of-type(2) summary::before{content:"\1F4AC";background:#d6ecf7}
+details:nth-of-type(3) summary::before{content:"\1F4F7";background:#ffe9b3}
+details:nth-of-type(4) summary::before{content:"\1F4B3";background:#ffd9c9}
+details:nth-of-type(5) summary::before{content:"\1F50D";background:#e5dcff}
+details ol{list-style:none;counter-reset:s;padding:4px 18px 18px}
+details li{counter-increment:s;display:flex;gap:14px;align-items:flex-start}
+details li::before{content:counter(s);flex:none;width:36px;height:36px;border-radius:50%;background:var(--sun);color:#10222b;display:grid;place-items:center;font-weight:700;font-size:1.05rem;margin-top:2px}
+.quiz{background:linear-gradient(135deg,var(--soft),var(--card));border:2px solid var(--line);border-radius:24px;padding:26px;box-shadow:0 10px 30px rgba(11,85,99,.12)}
+.opt{border-radius:14px;box-shadow:0 3px 0 var(--line)}
+#feedback form{background:var(--soft);padding:24px;border-radius:24px;max-width:none}
+.help a{border:0;border-top:6px solid var(--teal);border-radius:18px;box-shadow:0 8px 24px rgba(11,85,99,.14);transition:transform .2s}
+.help a:hover{transform:translateY(-4px)}
+.help a:nth-child(1){border-top-color:#d6483b}.help a:nth-child(2){border-top-color:#e8912d}.help a:nth-child(3){border-top-color:#2e9e57}.help a:nth-child(4){border-top-color:#3b82c4}
+.help a b{font-size:2.4rem}
+footer{background:linear-gradient(90deg,#052f38,#0b5563);color:#d6edf0;margin-top:20px;border-radius:40px 40px 0 0;padding:32px 18px 44px}
+@media (max-width:760px){.hero h1{font-size:2.3rem}h2{font-size:1.7rem}.herowrap{border-radius:0 0 36px 36px}}
+@media (prefers-reduced-motion:reduce){.phone{animation:none}}
+
+header.bar b{font-family:"Poppins","Noto Sans Devanagari","Nirmala UI",Mangal,Verdana,sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:.2px;line-height:1.3;max-width:26ch;display:flex;align-items:center;gap:10px}
+header.bar b::before{content:"\1F4F1";flex:none;width:40px;height:40px;border-radius:12px;background:var(--sun);display:grid;place-items:center;font-size:1.3rem}
+h1,h2{font-family:"Poppins","Noto Sans Devanagari","Nirmala UI",Mangal,Verdana,sans-serif;font-weight:700;letter-spacing:-.2px}
+.hero h1{font-size:2.8rem;line-height:1.18}
+@media (max-width:760px){.hero h1{font-size:2.1rem}}
+</style>
+</head>
+<body>
+<header class="bar">
+  <b>Digital Literacy Awareness for Senior Citizens</b>
+  <nav aria-label="Main">
+    <a href="#camp">About</a><a href="#learn">Learn</a><a href="#safe">Stay safe</a><a href="#help">Helplines</a>
+  </nav>
+  <span style="display:flex;gap:8px;flex-wrap:wrap"><select id="lang" class="fs" aria-label="Language" style="width:auto;min-height:0"><option value="en">English</option><option value="hi">हिन्दी</option><option value="mr">मराठी</option></select><button class="fs" id="fs" type="button" aria-pressed="false">Bigger text</button></span>
+</header>
+
+<div class="herowrap"><section class="hero" id="top">
+  <div>
+    <h1>Your phone can be easy. We will show you.</h1>
+    <p class="lead">Free help for senior citizens. Simple lessons to learn calls, WhatsApp, video calls and safe UPI payment. One step at a time. No hurry.</p>
+    <p class="chips"><span>Free for everyone</span><span>Call</span><span>WhatsApp</span><span>Video call</span><span>UPI payment</span></p>
+    <p class="cta"><a class="btn alt" href="#learn">Start learning</a><a class="btn" href="#safe">Stay safe</a></p>
+  </div>
+  <div class="phone" aria-hidden="true">
+    <div class="scr">
+      <div class="hello">Good morning</div>
+      <div class="t t1"><span>&#9742;</span>Call</div>
+      <div class="t t2"><span>&#128172;</span>WhatsApp</div>
+      <div class="t t3"><span>&#128247;</span>Video call</div>
+      <div class="t t4"><span>&#128274;</span>Stay safe</div>
+    </div>
+  </div>
+</section></div>
+<main>
+<section id="camp">
+  <h2>About this website</h2>
+  <p>This website is a community project by students of the Department of Information Technology, Priyadarshini College of Engineering, Nagpur. It helps senior citizens use their smartphones with confidence.</p>
+  </section>
+
+<section id="learn">
+  <h2>Learn step by step</h2>
+  <p class="lead">Tap a lesson to open it. Read slowly. Try it on your own phone.</p>
+  <details open><summary>Make a phone call</summary><ol>
+    <li>Tap the green Phone icon.</li><li>Tap Contacts and pick the name, or type the number on the keypad.</li><li>Tap the green call button.</li><li>Tap the red button to end the call.</li></ol></details>
+  <details><summary>Send a WhatsApp message</summary><ol>
+    <li>Open WhatsApp (green icon).</li><li>Tap the chat of the person you want.</li><li>Tap the box at the bottom and type your message.</li><li>Tap the green arrow to send.</li></ol></details>
+  <details><summary>Make a video call</summary><ol>
+    <li>Open the chat of your family member in WhatsApp.</li><li>Tap the small camera icon at the top.</li><li>Wait for them to answer. Hold the phone at face level.</li><li>Tap the red button to end.</li></ol></details>
+  <details><summary>Pay safely with UPI</summary><ol>
+    <li>Open your payment app (like Google Pay, PhonePe or BHIM).</li><li>Tap Scan, and scan the shop's QR code.</li><li>Type the amount and check the shop name.</li><li>Enter your PIN only to send money. Never share it.</li><li>Wait for the green success message before you leave.</li></ol></details>
+  <details><summary>Make the text bigger on your phone</summary><ol>
+    <li>Open Settings.</li><li>Tap Display, then Font size.</li><li>Slide to a size you like.</li></ol></details>
+</section>
+
+<section id="safe">
+  <h2>Stay safe from fraud</h2>
+  <p class="lead">Answer the question. Tap one choice.</p>
+  <div class="quiz" id="quiz">
+    <div class="q" id="qt"></div>
+    <div class="opts" id="qo"></div>
+    <div class="fb" id="qf" role="status" aria-live="polite"></div>
+    <p style="margin:12px 0 0"><button class="btn" id="qn" type="button" style="display:none">Next question</button></p>
+  </div>
+  <p class="note">Fraud help number: call 1930 (National Cyber Crime Helpline) as soon as money is lost.</p>
+</section>
+
+<section id="feedback">
+  <h2>Tell us how we did</h2>
+  <form id="fbk">
+    <div><div style="font-weight:700">Your rating</div>
+      <div class="stars" id="stars" role="radiogroup" aria-label="Rating out of 5">
+        <button type="button" aria-label="1 star">&#9733;</button><button type="button" aria-label="2 stars">&#9733;</button><button type="button" aria-label="3 stars">&#9733;</button><button type="button" aria-label="4 stars">&#9733;</button><button type="button" aria-label="5 stars">&#9733;</button>
+      </div></div>
+    <label>Your feedback<textarea id="fm" rows="3"></textarea></label>
+    <button class="btn" type="submit">Send feedback</button>
+    <div class="ok-msg" id="fbok" role="status"></div>
+  </form>
+</section>
+
+<section id="help" style="border-bottom:0">
+  <h2>Important helpline numbers</h2>
+  <p class="lead">Tap a number to call from your phone.</p>
+  <div class="help">
+    <a href="tel:112"><b>112</b>Emergency (police, fire, ambulance)</a>
+    <a href="tel:108"><b>108</b>Ambulance</a>
+    <a href="tel:14567"><b>14567</b>Elder Line (senior citizens)</a>
+    <a href="tel:1930"><b>1930</b>Cyber crime and online fraud</a>
+  </div>
+</section>
+</main>
+<footer>Community Project &middot; Department of Information Technology &middot; Priyadarshini College of Engineering, Nagpur</footer>
+
+<script>
+(function(){
+  var D={"hi": {"Digital Literacy Awareness for Senior Citizens": "वरिष्ठ नागरिकों के लिए डिजिटल साक्षरता जागरूकता", "About": "परिचय", "Learn": "सीखें", "Stay safe": "सुरक्षित रहें", "Join": "जुड़ें", "Helplines": "हेल्पलाइन", "Your phone can be easy. We will show you.": "आपका फोन चलाना आसान है। हम आपको सिखाएँगे।", "Free help for senior citizens. Simple lessons to learn calls, WhatsApp, video calls and safe UPI payment. One step at a time. No hurry.": "वरिष्ठ नागरिकों के लिए मुफ्त मदद। कॉल, व्हाट्सऐप, वीडियो कॉल और सुरक्षित UPI भुगतान सीखने के आसान पाठ। एक बार में एक कदम। कोई जल्दी नहीं।", "Join the free camp": "मुफ्त शिविर से जुड़ें", "Start learning": "सीखना शुरू करें", "Good morning": "सुप्रभात", "Call": "कॉल", "WhatsApp": "व्हाट्सऐप", "Video call": "वीडियो कॉल", "About this website": "इस वेबसाइट के बारे में", "This website is a community project by students of the Department of Information Technology, Priyadarshini College of Engineering, Nagpur. It helps senior citizens use their smartphones with confidence.": "यह वेबसाइट प्रियदर्शिनी कॉलेज ऑफ इंजीनियरिंग, नागपुर के सूचना प्रौद्योगिकी विभाग के विद्यार्थियों का सामुदायिक प्रोजेक्ट है। यह वरिष्ठ नागरिकों को आत्मविश्वास से स्मार्टफोन चलाने में मदद करती है।", "Cost": "शुल्क", "Free for everyone": "सबके लिए मुफ्त", "Date and time": "तारीख और समय", "[Add camp date and time]": "[शिविर की तारीख और समय जोड़ें]", "Place": "स्थान", "[Add camp place]": "[शिविर का स्थान जोड़ें]", "Bring": "साथ लाएँ", "Your phone and charger": "अपना फोन और चार्जर", "Our volunteers never ask for your PIN, OTP or bank details. If anyone does, say no.": "हमारे स्वयंसेवक कभी आपका पिन, ओटीपी या बैंक की जानकारी नहीं माँगते। अगर कोई माँगे, तो मना कर दें।", "Learn step by step": "कदम-दर-कदम सीखें", "Tap a lesson to open it. Read slowly. Try it on your own phone.": "पाठ खोलने के लिए उस पर टैप करें। धीरे-धीरे पढ़ें। अपने फोन पर आज़माएँ।", "Make a phone call": "फोन कॉल करें", "Send a WhatsApp message": "व्हाट्सऐप संदेश भेजें", "Make a video call": "वीडियो कॉल करें", "Pay safely with UPI": "UPI से सुरक्षित भुगतान करें", "Make the text bigger on your phone": "फोन में अक्षर बड़े करें", "Tap the green Phone icon.": "हरे रंग के फोन आइकन पर टैप करें।", "Tap Contacts and pick the name, or type the number on the keypad.": "संपर्क (Contacts) पर टैप करके नाम चुनें, या कीपैड पर नंबर डालें।", "Tap the green call button.": "हरे कॉल बटन पर टैप करें।", "Tap the red button to end the call.": "कॉल खत्म करने के लिए लाल बटन दबाएँ।", "Open WhatsApp (green icon).": "व्हाट्सऐप खोलें (हरा आइकन)।", "Tap the chat of the person you want.": "जिससे बात करनी है उसकी चैट पर टैप करें।", "Tap the box at the bottom and type your message.": "नीचे वाले बॉक्स पर टैप करके संदेश लिखें।", "Tap the green arrow to send.": "भेजने के लिए हरे तीर पर टैप करें।", "Open the chat of your family member in WhatsApp.": "व्हाट्सऐप में अपने परिवार के सदस्य की चैट खोलें।", "Tap the small camera icon at the top.": "ऊपर छोटे कैमरा आइकन पर टैप करें।", "Wait for them to answer. Hold the phone at face level.": "उनके उठाने का इंतज़ार करें। फोन को चेहरे के सामने रखें।", "Tap the red button to end.": "खत्म करने के लिए लाल बटन दबाएँ।", "Open your payment app (like Google Pay, PhonePe or BHIM).": "अपना पेमेंट ऐप खोलें (जैसे Google Pay, PhonePe या BHIM)।", "Tap Scan, and scan the shop's QR code.": "स्कैन पर टैप करें और दुकान का QR कोड स्कैन करें।", "Type the amount and check the shop name.": "रकम डालें और दुकान का नाम जाँचें।", "Enter your PIN only to send money. Never share it.": "पिन केवल पैसे भेजने के लिए डालें। इसे कभी किसी को न बताएँ।", "Wait for the green success message before you leave.": "जाने से पहले हरे रंग का सफल संदेश आने तक रुकें।", "Open Settings.": "सेटिंग्स खोलें।", "Tap Display, then Font size.": "डिस्प्ले पर टैप करें, फिर फ़ॉन्ट साइज़ पर।", "Slide to a size you like.": "अपनी पसंद के आकार तक स्लाइड करें।", "Stay safe from fraud": "धोखाधड़ी से सुरक्षित रहें", "Answer the question. Tap one choice.": "प्रश्न का उत्तर दें। एक विकल्प पर टैप करें।", "Fraud help number: call 1930 (National Cyber Crime Helpline) as soon as money is lost.": "धोखाधड़ी में मदद: पैसे जाते ही 1930 (राष्ट्रीय साइबर क्राइम हेल्पलाइन) पर कॉल करें।", "Join the camp": "शिविर से जुड़ें", "Fill this short form. A family member can fill it for you.": "यह छोटा फॉर्म भरें। परिवार का कोई सदस्य आपके लिए भर सकता है।", "Full name": "पूरा नाम", "Age": "उम्र", "Phone number": "फोन नंबर", "Type of phone": "फोन का प्रकार", "Smartphone (touch screen)": "स्मार्टफोन (टच स्क्रीन)", "Keypad phone": "कीपैड फोन", "I do not have a phone yet": "अभी मेरे पास फोन नहीं है", "What help do you need?": "आपको किस चीज़ में मदद चाहिए?", "Calls and contacts": "कॉल और संपर्क", "Video calls": "वीडियो कॉल", "UPI payment": "UPI भुगतान", "Staying safe from fraud": "धोखाधड़ी से बचाव", "Register for the camp": "शिविर के लिए पंजीकरण करें", "Camp photographs": "शिविर की तस्वीरें", "Moments from our camp. Photos are shared with permission.": "हमारे शिविर के पल। तस्वीरें अनुमति से साझा की गई हैं।", "Photo 1": "फोटो 1", "Photo 2": "फोटो 2", "Photo 3": "फोटो 3", "Photo 4": "फोटो 4", "Team with senior citizens": "वरिष्ठ नागरिकों के साथ टीम", "Teaching WhatsApp": "व्हाट्सऐप सिखाते हुए", "UPI demonstration": "UPI प्रदर्शन", "Group photo": "ग्रुप फोटो", "Tell us how we did": "बताइए हमारा काम कैसा रहा", "Your rating": "आपकी रेटिंग", "Your feedback": "आपकी प्रतिक्रिया", "Send feedback": "प्रतिक्रिया भेजें", "Important helpline numbers": "महत्वपूर्ण हेल्पलाइन नंबर", "Tap a number to call from your phone.": "अपने फोन से कॉल करने के लिए नंबर पर टैप करें।", "Emergency (police, fire, ambulance)": "आपातकाल (पुलिस, दमकल, एम्बुलेंस)", "Ambulance": "एम्बुलेंस", "Elder Line (senior citizens)": "एल्डर लाइन (वरिष्ठ नागरिक)", "Cyber crime and online fraud": "साइबर अपराध और ऑनलाइन धोखाधड़ी", "Community Project · Department of Information Technology · Priyadarshini College of Engineering, Nagpur": "सामुदायिक प्रोजेक्ट · सूचना प्रौद्योगिकी विभाग · प्रियदर्शिनी कॉलेज ऑफ इंजीनियरिंग, नागपुर", "Correct. ": "सही। ", "Not correct. ": "गलत। ", "Next question": "अगला प्रश्न", "See my score": "मेरा स्कोर देखें", "Try again": "फिर कोशिश करें", "Question": "प्रश्न", "Thank you,": "धन्यवाद,", "You are registered. Our volunteers will call you before the camp.": "आप पंजीकृत हो गए हैं। हमारे स्वयंसेवक शिविर से पहले आपको फोन करेंगे।", "Please tap a star to give a rating.": "कृपया रेटिंग देने के लिए एक स्टार पर टैप करें।", "Thank you for your feedback.": "आपकी प्रतिक्रिया के लिए धन्यवाद।", "Bigger text": "बड़े अक्षर", "Normal text": "सामान्य अक्षर", "You got": "आपके अंक", "Excellent. You know how to stay safe.": "बहुत बढ़िया। आप सुरक्षित रहना जानते हैं।", "Good try. Read the tips again and try once more.": "अच्छा प्रयास। सुझाव फिर पढ़ें और दोबारा कोशिश करें।"}, "mr": {"Digital Literacy Awareness for Senior Citizens": "ज्येष्ठ नागरिकांसाठी डिजिटल साक्षरता जागरूकता", "About": "परिचय", "Learn": "शिका", "Stay safe": "सुरक्षित रहा", "Join": "सहभागी व्हा", "Helplines": "हेल्पलाइन", "Your phone can be easy. We will show you.": "तुमचा फोन वापरणे सोपे आहे. आम्ही तुम्हाला शिकवू.", "Free help for senior citizens. Simple lessons to learn calls, WhatsApp, video calls and safe UPI payment. One step at a time. No hurry.": "ज्येष्ठ नागरिकांसाठी मोफत मदत. कॉल, व्हॉट्सअॅप, व्हिडिओ कॉल आणि सुरक्षित UPI पेमेंट शिकण्यासाठी सोपे धडे. एका वेळी एक पाऊल. घाई नाही.", "Join the free camp": "मोफत शिबिरात सहभागी व्हा", "Start learning": "शिकायला सुरुवात करा", "Good morning": "शुभ प्रभात", "Call": "कॉल", "WhatsApp": "व्हॉट्सअॅप", "Video call": "व्हिडिओ कॉल", "About this website": "या वेबसाइटबद्दल", "This website is a community project by students of the Department of Information Technology, Priyadarshini College of Engineering, Nagpur. It helps senior citizens use their smartphones with confidence.": "ही वेबसाइट प्रियदर्शिनी कॉलेज ऑफ इंजिनिअरिंग, नागपूरच्या माहिती तंत्रज्ञान विभागातील विद्यार्थ्यांचा सामुदायिक प्रकल्प आहे. ती ज्येष्ठ नागरिकांना आत्मविश्वासाने स्मार्टफोन वापरण्यास मदत करते.", "Cost": "शुल्क", "Free for everyone": "सर्वांसाठी मोफत", "Date and time": "तारीख आणि वेळ", "[Add camp date and time]": "[शिबिराची तारीख आणि वेळ जोडा]", "Place": "ठिकाण", "[Add camp place]": "[शिबिराचे ठिकाण जोडा]", "Bring": "सोबत आणा", "Your phone and charger": "तुमचा फोन आणि चार्जर", "Our volunteers never ask for your PIN, OTP or bank details. If anyone does, say no.": "आमचे स्वयंसेवक कधीही तुमचा पिन, ओटीपी किंवा बँकेची माहिती मागत नाहीत. कोणी मागितल्यास नकार द्या.", "Learn step by step": "टप्प्याटप्प्याने शिका", "Tap a lesson to open it. Read slowly. Try it on your own phone.": "धडा उघडण्यासाठी त्यावर टॅप करा. हळू वाचा. तुमच्या फोनवर करून पहा.", "Make a phone call": "फोन कॉल करा", "Send a WhatsApp message": "व्हॉट्सअॅप संदेश पाठवा", "Make a video call": "व्हिडिओ कॉल करा", "Pay safely with UPI": "UPI ने सुरक्षित पेमेंट करा", "Make the text bigger on your phone": "फोनमधील अक्षरे मोठी करा", "Tap the green Phone icon.": "हिरव्या फोन आयकॉनवर टॅप करा.", "Tap Contacts and pick the name, or type the number on the keypad.": "संपर्क (Contacts) वर टॅप करून नाव निवडा किंवा कीपॅडवर नंबर टाका.", "Tap the green call button.": "हिरव्या कॉल बटणावर टॅप करा.", "Tap the red button to end the call.": "कॉल संपवण्यासाठी लाल बटण दाबा.", "Open WhatsApp (green icon).": "व्हॉट्सअॅप उघडा (हिरवा आयकॉन).", "Tap the chat of the person you want.": "ज्यांच्याशी बोलायचे त्यांच्या चॅटवर टॅप करा.", "Tap the box at the bottom and type your message.": "खालच्या बॉक्सवर टॅप करून संदेश लिहा.", "Tap the green arrow to send.": "पाठवण्यासाठी हिरव्या बाणावर टॅप करा.", "Open the chat of your family member in WhatsApp.": "व्हॉट्सअॅपमध्ये कुटुंबातील सदस्याची चॅट उघडा.", "Tap the small camera icon at the top.": "वर लहान कॅमेरा आयकॉनवर टॅप करा.", "Wait for them to answer. Hold the phone at face level.": "ते उत्तर देईपर्यंत थांबा. फोन चेहऱ्यासमोर धरा.", "Tap the red button to end.": "संपवण्यासाठी लाल बटण दाबा.", "Open your payment app (like Google Pay, PhonePe or BHIM).": "तुमचे पेमेंट ॲप उघडा (उदा. Google Pay, PhonePe किंवा BHIM).", "Tap Scan, and scan the shop's QR code.": "स्कॅन वर टॅप करा आणि दुकानाचा QR कोड स्कॅन करा.", "Type the amount and check the shop name.": "रक्कम टाका आणि दुकानाचे नाव तपासा.", "Enter your PIN only to send money. Never share it.": "पिन फक्त पैसे पाठवण्यासाठी टाका. तो कधीही कोणाला सांगू नका.", "Wait for the green success message before you leave.": "निघण्यापूर्वी हिरवा यशस्वी संदेश येईपर्यंत थांबा.", "Open Settings.": "सेटिंग्ज उघडा.", "Tap Display, then Font size.": "डिस्प्ले वर टॅप करा, मग फॉन्ट साइज वर.", "Slide to a size you like.": "तुम्हाला आवडेल त्या आकारापर्यंत स्लाइड करा.", "Stay safe from fraud": "फसवणुकीपासून सुरक्षित रहा", "Answer the question. Tap one choice.": "प्रश्नाचे उत्तर द्या. एका पर्यायावर टॅप करा.", "Fraud help number: call 1930 (National Cyber Crime Helpline) as soon as money is lost.": "फसवणुकीसाठी मदत: पैसे गेल्यावर लगेच 1930 (राष्ट्रीय सायबर क्राइम हेल्पलाइन) वर कॉल करा.", "Join the camp": "शिबिरात सहभागी व्हा", "Fill this short form. A family member can fill it for you.": "हा छोटा फॉर्म भरा. कुटुंबातील सदस्य तुमच्यासाठी भरू शकतात.", "Full name": "पूर्ण नाव", "Age": "वय", "Phone number": "फोन नंबर", "Type of phone": "फोनचा प्रकार", "Smartphone (touch screen)": "स्मार्टफोन (टच स्क्रीन)", "Keypad phone": "कीपॅड फोन", "I do not have a phone yet": "माझ्याकडे अजून फोन नाही", "What help do you need?": "तुम्हाला कशात मदत हवी आहे?", "Calls and contacts": "कॉल आणि संपर्क", "Video calls": "व्हिडिओ कॉल", "UPI payment": "UPI पेमेंट", "Staying safe from fraud": "फसवणुकीपासून बचाव", "Register for the camp": "शिबिरासाठी नोंदणी करा", "Camp photographs": "शिबिराची छायाचित्रे", "Moments from our camp. Photos are shared with permission.": "आमच्या शिबिरातील क्षण. छायाचित्रे परवानगीने शेअर केली आहेत.", "Photo 1": "फोटो 1", "Photo 2": "फोटो 2", "Photo 3": "फोटो 3", "Photo 4": "फोटो 4", "Team with senior citizens": "ज्येष्ठ नागरिकांसोबत टीम", "Teaching WhatsApp": "व्हॉट्सअॅप शिकवताना", "UPI demonstration": "UPI प्रात्यक्षिक", "Group photo": "ग्रुप फोटो", "Tell us how we did": "आमचे काम कसे वाटले ते सांगा", "Your rating": "तुमचे रेटिंग", "Your feedback": "तुमचा अभिप्राय", "Send feedback": "अभिप्राय पाठवा", "Important helpline numbers": "महत्त्वाचे हेल्पलाइन क्रमांक", "Tap a number to call from your phone.": "फोनवरून कॉल करण्यासाठी क्रमांकावर टॅप करा.", "Emergency (police, fire, ambulance)": "आणीबाणी (पोलीस, अग्निशमन, रुग्णवाहिका)", "Ambulance": "रुग्णवाहिका", "Elder Line (senior citizens)": "एल्डर लाइन (ज्येष्ठ नागरिक)", "Cyber crime and online fraud": "सायबर गुन्हे आणि ऑनलाइन फसवणूक", "Community Project · Department of Information Technology · Priyadarshini College of Engineering, Nagpur": "सामुदायिक प्रकल्प · माहिती तंत्रज्ञान विभाग · प्रियदर्शिनी कॉलेज ऑफ इंजिनिअरिंग, नागपूर", "Correct. ": "बरोबर. ", "Not correct. ": "चुकीचे. ", "Next question": "पुढील प्रश्न", "See my score": "माझा स्कोअर पहा", "Try again": "पुन्हा प्रयत्न करा", "Question": "प्रश्न", "Thank you,": "धन्यवाद,", "You are registered. Our volunteers will call you before the camp.": "तुमची नोंदणी झाली आहे. आमचे स्वयंसेवक शिबिरापूर्वी तुम्हाला फोन करतील.", "Please tap a star to give a rating.": "कृपया रेटिंग देण्यासाठी एका स्टारवर टॅप करा.", "Thank you for your feedback.": "तुमच्या अभिप्रायाबद्दल धन्यवाद.", "Bigger text": "मोठी अक्षरे", "Normal text": "सामान्य अक्षरे", "You got": "तुमचे गुण", "Excellent. You know how to stay safe.": "उत्तम. तुम्हाला सुरक्षित कसे राहायचे ते माहीत आहे.", "Good try. Read the tips again and try once more.": "चांगला प्रयत्न. सूचना पुन्हा वाचा आणि पुन्हा प्रयत्न करा."}},QS={"hi": [{"q": "कोई खुद को बैंक वाला बताकर कार्ड बंद होने से रोकने के लिए आपसे ओटीपी माँगता है। आप क्या करेंगे?", "o": ["जल्दी से ओटीपी बता दूँगा", "कॉल काट दूँगा और ओटीपी कभी नहीं बताऊँगा", "ओटीपी मैसेज में भेज दूँगा"], "a": 1, "e": "बैंक कभी ओटीपी नहीं माँगता। कॉल काट दें।"}, {"q": "आपको इनाम जीतने का लिंक वाला मैसेज मिलता है। आप क्या करेंगे?", "o": ["क्लिक नहीं करूँगा। मैसेज डिलीट कर दूँगा", "क्लिक करके जानकारी भर दूँगा", "सब दोस्तों को भेज दूँगा"], "a": 0, "e": "नकली इनाम के लिंक से पैसे और जानकारी चोरी होती है। डिलीट कर दें।"}, {"q": "दुकान पर QR कोड स्कैन करके पैसे देते समय UPI पिन कब डालते हैं?", "o": ["पैसे पाने के लिए", "केवल पैसे भेजने के लिए", "जब कोई अजनबी कहे"], "a": 1, "e": "पिन केवल पैसे भेजने के लिए चाहिए, पाने के लिए कभी नहीं।"}, {"q": "कोई अनजान व्यक्ति आपके फोन पर पैसे का अनुरोध (request) भेजता है। आप क्या करेंगे?", "o": ["शिष्टाचार में मंज़ूर कर दूँगा", "अस्वीकार (Decline) कर दूँगा", "जाँचने के लिए पिन डालूँगा"], "a": 1, "e": "अनजान लोगों के अनुरोध अस्वीकार करें।"}], "mr": [{"q": "कोणी स्वतःला बँकेचा माणूस सांगून कार्ड बंद होऊ नये म्हणून ओटीपी मागतो. तुम्ही काय कराल?", "o": ["लगेच ओटीपी सांगेन", "कॉल कट करेन आणि ओटीपी कधीच सांगणार नाही", "ओटीपी मेसेजने पाठवेन"], "a": 1, "e": "बँक कधीही ओटीपी मागत नाही. कॉल कट करा."}, {"q": "तुम्हाला बक्षीस जिंकल्याचा लिंक असलेला मेसेज येतो. तुम्ही काय कराल?", "o": ["क्लिक करणार नाही. मेसेज डिलीट करेन", "क्लिक करून माहिती भरेन", "सर्व मित्रांना फॉरवर्ड करेन"], "a": 0, "e": "बनावट बक्षीस लिंकमुळे पैसे आणि माहिती चोरीला जाते. डिलीट करा."}, {"q": "दुकानात QR कोड स्कॅन करून पैसे देताना UPI पिन कधी टाकायचा?", "o": ["पैसे मिळवण्यासाठी", "फक्त पैसे पाठवण्यासाठी", "अनोळखी व्यक्तीने सांगितल्यावर"], "a": 1, "e": "पिन फक्त पैसे पाठवण्यासाठी लागतो, मिळवण्यासाठी कधीच नाही."}, {"q": "एखादी अनोळखी व्यक्ती तुमच्या फोनवर पैशांची विनंती (request) पाठवते. तुम्ही काय कराल?", "o": ["सौजन्य म्हणून मंजूर करेन", "नाकारेन (Decline)", "तपासण्यासाठी पिन टाकेन"], "a": 1, "e": "अनोळखी लोकांच्या विनंत्या नाकारा."}]},lang="en";
+  try{lang=localStorage.getItem("lang")||"en"}catch(e){}
+  function T(k){return lang==="en"?k:((D[lang]&&D[lang][k])||k)}
+  var sv=function(k,v){try{localStorage.setItem(k,v)}catch(e){}};
+  var gt=function(k){try{return localStorage.getItem(k)}catch(e){return null}};
+  var fs=document.getElementById('fs');
+  function setBig(b){document.body.classList.toggle('big',b);fs.setAttribute('aria-pressed',b);fs.textContent=b?T('Normal text'):T('Bigger text');sv('big',b?'1':'0')}
+  fs.onclick=function(){setBig(!document.body.classList.contains('big'))};
+  if(gt('big')==='1')setBig(true);
+
+  var Q0=[
+   {q:"A caller says he is from your bank and asks for your OTP to stop your card from closing. What do you do?",o:["Tell him the OTP quickly","Cut the call and never share the OTP","Send the OTP by message"],a:1,e:"A bank never asks for your OTP. Cut the call."},
+   {q:"You get a message with a link that says you won a prize. What do you do?",o:["Do not click. Delete the message","Click and fill in your details","Forward it to all friends"],a:0,e:"Fake prize links steal money and data. Delete it."},
+   {q:"At a shop you scan the QR code to pay. When do you enter your UPI PIN?",o:["To receive money","To send money only","When a stranger asks"],a:1,e:"A PIN is needed only to send money, never to receive it."},
+   {q:"Someone you do not know sends a payment request on your phone. What do you do?",o:["Approve it to be polite","Decline it","Enter your PIN to check it"],a:1,e:"Decline requests from unknown people."}
+  ];
+  var Q=Q0,i=0,done=false,qt=document.getElementById('qt'),qo=document.getElementById('qo'),qf=document.getElementById('qf'),qn=document.getElementById('qn'),score=0;
+  function show(){
+    done=false;qf.textContent='';qf.className='fb';qn.style.display='none';qo.innerHTML='';
+    var c=Q[i];qt.textContent=T('Question')+' '+(i+1)+' / '+Q.length+'. '+c.q;
+    c.o.forEach(function(t,k){var b=document.createElement('button');b.type='button';b.className='opt';b.textContent=t;
+      b.onclick=function(){if(done)return;done=true;
+        var ok=k===c.a;if(ok)score++;
+        b.classList.add(ok?'ok':'no');qo.children[c.a].classList.add('ok');
+        qf.textContent=(ok?T('Correct. '):T('Not correct. '))+c.e;qf.className='fb '+(ok?'ok':'no');
+        qn.textContent=i<Q.length-1?T('Next question'):T('See my score');qn.dataset.s=i<Q.length-1?'':'score';qn.style.display='inline-block';qn.focus()};
+      qo.appendChild(b)})
+  }
+  qn.onclick=function(){
+    if(i<Q.length-1){i++;show()}
+    else if(qn.dataset.s==='score'){qt.textContent=T('You got')+' '+score+' / '+Q.length;qo.innerHTML='';qf.textContent=score===Q.length?T('Excellent. You know how to stay safe.'):T('Good try. Read the tips again and try once more.');qf.className='fb ok';qn.textContent=T('Try again');qn.dataset.s='again';}
+    else{i=0;score=0;show()}
+  };
+  show();
+
+
+  var stars=[].slice.call(document.querySelectorAll('#stars button')),rate=0;
+  stars.forEach(function(b,k){b.onclick=function(){rate=k+1;stars.forEach(function(s,j){s.classList.toggle('on',j<rate)})}});
+  document.getElementById('fbk').onsubmit=function(e){e.preventDefault();
+    var m=document.getElementById('fbok');m.style.display='block';
+    if(!rate){m.textContent=T('Please tap a star to give a rating.');return}
+    var l=[];try{l=JSON.parse(gt('fbs')||'[]')}catch(x){}l.push({rate:rate,msg:document.getElementById('fm').value});sv('fbs',JSON.stringify(l));
+    m.textContent=T('Thank you for your feedback.');e.target.reset();rate=0;stars.forEach(function(s){s.classList.remove('on')})};
+  function apply(){
+    document.documentElement.lang=lang;document.title=T('Digital Literacy Awareness for Senior Citizens');
+    var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null),n,ns=[];
+    while(n=w.nextNode())ns.push(n);
+    ns.forEach(function(n){
+      var p=n.parentNode;
+      if(!p||/^(SCRIPT|STYLE)$/.test(p.nodeName)||p.closest('#quiz,#regok,#fbok,#fs'))return;
+      if(n.__o===undefined){if(!n.nodeValue.trim())return;n.__o=n.nodeValue}
+      var m=n.__o.match(/^(\s*)([\s\S]*?)(\s*)$/);
+      n.nodeValue=m[1]+T(m[2])+m[3];
+    });
+    Q=lang==='en'?Q0:QS[lang];i=0;score=0;show();setBig(document.body.classList.contains('big'));
+  }
+  var ls=document.getElementById('lang');ls.value=lang;
+  ls.onchange=function(){lang=ls.value;sv('lang',lang);apply()};
+  apply();
+})();
+</script>
+</body>
+</html>
